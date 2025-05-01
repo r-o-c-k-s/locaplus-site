@@ -8,20 +8,20 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f0f0f0;
       color: #333;
     }
 
     header {
       background-color: #004aad;
       color: white;
-      padding: 30px;
+      padding: 50px 20px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     nav {
@@ -38,18 +38,20 @@
     }
 
     .hero {
-      background-color: #e8f0fe;
-      padding: 60px 20px;
+      background-image: url('https://via.placeholder.com/1920x500'); /* Example Image */
+      background-size: cover;
+      color: white;
+      padding: 100px 20px;
       text-align: center;
     }
 
     .hero h2 {
-      font-size: 2rem;
+      font-size: 3rem;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       max-width: 600px;
       margin: auto;
     }
@@ -58,10 +60,11 @@
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
+      text-align: center;
     }
 
     .section h3 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #004aad;
     }
 
@@ -69,15 +72,30 @@
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
-      margin-top: 20px;
+      margin-top: 30px;
+      justify-content: center;
     }
 
     .service {
       flex: 1 1 300px;
       background-color: white;
       border-radius: 8px;
-      padding: 20px;
+      padding: 30px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .service img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .service h4 {
+      font-size: 1.5rem;
+      color: #004aad;
+      margin-bottom: 15px;
     }
 
     footer {
@@ -85,17 +103,27 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
     }
 
     @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
       nav a {
         display: block;
         margin: 10px 0;
-      }
-
-      .services {
-        flex-direction: column;
       }
     }
   </style>
@@ -123,10 +151,12 @@
     <h3>Nos services</h3>
     <div class="services">
       <div class="service">
+        <img src="https://via.placeholder.com/150" alt="Gestion Locative">
         <h4>Gestion locative</h4>
         <p>Prise en charge complète de la location, communication avec les locataires, gestion des paiements et interventions techniques.</p>
       </div>
       <div class="service">
+        <img src="https://via.placeholder.com/150" alt="Entretien Ménager">
         <h4>Entretien ménager</h4>
         <p>Nettoyage professionnel et régulier des logements et espaces communs, pour garantir une hygiène irréprochable.</p>
       </div>

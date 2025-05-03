@@ -1,213 +1,200 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LocaPlus - Gestion locative et entretien ménager</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocaPlus - Gestion locative & Entretien ménager</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f4f4f4;
       color: #333;
     }
-
     header {
       background-color: #004aad;
       color: white;
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
-
     header h1 {
-      margin: 0;
       font-size: 3rem;
     }
-
-    nav {
-      background-color: #003a85;
-      padding: 10px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    header p {
+      font-size: 1.2rem;
     }
-
-    nav a {
+    .nav-bar {
+      background-color: #003a85;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .nav-bar a {
       color: white;
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
     }
-
     .video-section {
       position: relative;
       width: 100%;
       height: 500px;
       overflow: hidden;
     }
-
     .video-section video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .hero {
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
       position: absolute;
-      top: 20%;
-      left: 0;
-      right: 0;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
     }
-
     .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 15px;
+      font-size: 2.5rem;
+      font-weight: bold;
     }
-
     .hero p {
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
     }
-
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
       text-align: center;
     }
-
-    .section h3 {
-      font-size: 2rem;
-      color: #004aad;
+    .button:hover {
+      background-color: #003a85;
     }
-
-    .services {
+    .service-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .service-content {
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 30px;
       justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
     }
-
-    .service {
-      flex: 1 1 300px;
+    .service-card {
       background-color: white;
       border-radius: 8px;
       padding: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
       text-align: center;
     }
-
-    .service img {
+    .service-card img {
       width: 100%;
-      max-width: 300px;
       height: 200px;
       object-fit: cover;
-      margin-bottom: 20px;
       border-radius: 8px;
     }
-
-    .service h4 {
-      font-size: 1.5rem;
-      color: #004aad;
-      margin-bottom: 15px;
-    }
-
     footer {
       background-color: #003a85;
       color: white;
-      text-align: center;
       padding: 20px;
-      margin-top: 50px;
+      text-align: center;
     }
-
     footer p {
       font-size: 0.9rem;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    @media (max-width: 600px) {
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
     }
   </style>
 </head>
 <body>
 
-  <header id="accueil">
+  <!-- Header avec la vidéo -->
+  <header>
     <h1>LocaPlus</h1>
     <p>Gestion locative & Entretien ménager</p>
   </header>
 
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#services">Nos services</a>
-    <a href="#apropos">À propos</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Navbar -->
+  <div class="nav-bar">
+    <a href="#">Accueil</a>
+    <a href="#">Nos Services</a>
+    <a href="#">À propos</a>
+    <a href="#">Contact</a>
+  </div>
 
+  <!-- Vidéo en tête -->
   <section class="video-section">
     <video autoplay loop muted>
-      <source src="vidéos/entretien-menager.mp4" type="video/mp4">
+      <source src="video/gestion_allocation.mp4" type="video/mp4">
       Votre navigateur ne prend pas en charge la lecture de vidéos.
     </video>
     <div class="hero">
-      <h2>Des logements bien gérés, des espaces toujours propres</h2>
-      <p>LocaPlus vous accompagne dans la gestion complète de vos logements et l’entretien ménager, pour offrir à vos locataires confort et sérénité.</p>
+      <h2>Gérer votre patrimoine, simplifié et efficace</h2>
+      <p>LocaPlus vous accompagne dans la gestion locative et l'entretien ménager pour un environnement serein et bien entretenu.</p>
     </div>
   </section>
 
-  <section class="section" id="services">
-    <h3>Nos services</h3>
-    <div class="services">
-      <div class="service">
-        <img src="images/gestionlocative.jpg" alt="Gestion Locative">
-        <h4>Gestion locative</h4>
-        <p>Prise en charge complète de la location, communication avec les locataires, gestion des paiements et interventions techniques.</p>
+  <!-- Boutons pour les services -->
+  <section class="buttons">
+    <button class="button" onclick="showService('gestion-locative')">Gestion Locative</button>
+    <button class="button" onclick="showService('entretien-menager')">Entretien Ménager</button>
+  </section>
+
+  <!-- Section des services -->
+  <section id="gestion-locative" class="service-section" style="display:none;">
+    <h3>Nos services de gestion locative</h3>
+    <div class="service-content">
+      <div class="service-card">
+        <h4>Gestion des loyers</h4>
+        <p>Nous assurons la gestion complète des paiements de loyers et des relances pour garantir la régularité de vos revenus locatifs.</p>
       </div>
-      <div class="service">
-        <img src="images/entretienmenager.jpg" alt="Entretien Ménager">
-        <h4>Entretien ménager</h4>
-        <p>Nettoyage professionnel et régulier des logements et espaces communs, pour garantir une hygiène irréprochable.</p>
+      <div class="service-card">
+        <h4>Maintenance et réparations</h4>
+        <p>Notre équipe se charge de la maintenance, des réparations et des urgences pour vos propriétés, offrant ainsi une tranquillité d'esprit à vos locataires.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="apropos">
-    <h3>À propos</h3>
-    <p>LocaPlus est une entreprise québécoise spécialisée dans la gestion immobilière et les services de nettoyage résidentiel et commercial. Notre mission est d’offrir une tranquillité d’esprit aux propriétaires tout en assurant un environnement propre et sain pour les occupants.</p>
+  <section id="entretien-menager" class="service-section" style="display:none;">
+    <h3>Nos services d'entretien ménager</h3>
+    <div class="service-content">
+      <div class="service-card">
+        <h4>Nettoyage régulier</h4>
+        <p>Nous offrons des services de nettoyage réguliers pour maintenir la propreté de vos espaces, qu'ils soient résidentiels ou commerciaux.</p>
+      </div>
+      <div class="service-card">
+        <h4>Nettoyage de fin de bail</h4>
+        <p>Nous proposons des services spécialisés de nettoyage pour les fins de bail, en garantissant que le lieu soit prêt pour le prochain occupant.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section" id="contact">
-    <h3>Contact</h3>
-    <p>Vous avez des questions ou souhaitez discuter de vos besoins en gestion locative ou entretien ménager? Contactez-nous!</p>
-    <p>Email : info@locaplus.ca<br>Téléphone : 514-000-0000</p>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <p>© 2025 LocaPlus. Tous droits réservés.</p>
     <p>Contact : info@locaplus.ca | 514-000-0000</p>
   </footer>
+
+  <script>
+    function showService(service) {
+      // Cacher toutes les sections de services
+      document.getElementById('gestion-locative').style.display = 'none';
+      document.getElementById('entretien-menager').style.display = 'none';
+
+      // Afficher la section correspondante
+      document.getElementById(service).style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>

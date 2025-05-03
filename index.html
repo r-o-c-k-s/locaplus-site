@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LocaPlus - Gestion locative et entretien ménager</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
@@ -28,6 +32,9 @@
       background-color: #003a85;
       padding: 10px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -37,7 +44,6 @@
       font-weight: bold;
     }
 
-    /* Vidéo */
     .video-section {
       position: relative;
       width: 100%;
@@ -148,19 +154,18 @@
 </head>
 <body>
 
-  <header>
+  <header id="accueil">
     <h1>LocaPlus</h1>
     <p>Gestion locative & Entretien ménager</p>
   </header>
 
   <nav>
-    <a href="#">Accueil</a>
-    <a href="#">Nos services</a>
-    <a href="#">À propos</a>
-    <a href="#">Contact</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Nos services</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Vidéo de présentation -->
   <section class="video-section">
     <video autoplay loop muted>
       <source src="vidéos/entretien-menager.mp4" type="video/mp4">
@@ -172,7 +177,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="services">
     <h3>Nos services</h3>
     <div class="services">
       <div class="service">
@@ -186,6 +191,17 @@
         <p>Nettoyage professionnel et régulier des logements et espaces communs, pour garantir une hygiène irréprochable.</p>
       </div>
     </div>
+  </section>
+
+  <section class="section" id="apropos">
+    <h3>À propos</h3>
+    <p>LocaPlus est une entreprise québécoise spécialisée dans la gestion immobilière et les services de nettoyage résidentiel et commercial. Notre mission est d’offrir une tranquillité d’esprit aux propriétaires tout en assurant un environnement propre et sain pour les occupants.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact</h3>
+    <p>Vous avez des questions ou souhaitez discuter de vos besoins en gestion locative ou entretien ménager? Contactez-nous!</p>
+    <p>Email : info@locaplus.ca<br>Téléphone : 514-000-0000</p>
   </section>
 
   <footer>
